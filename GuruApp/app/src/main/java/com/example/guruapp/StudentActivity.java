@@ -19,22 +19,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 
 import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class ExamMaksManagement extends AppCompatActivity
+public class StudentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exam_maks_management);
+        setContentView(R.layout.activity_student);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //        FloatingActionButton fab = findViewById(R.id.fab);
@@ -52,10 +46,6 @@ public class ExamMaksManagement extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
-
     }
 
     @Override
@@ -71,7 +61,7 @@ public class ExamMaksManagement extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.exam_maks_management, menu);
+        getMenuInflater().inflate(R.menu.student, menu);
         return true;
     }
 
@@ -98,27 +88,15 @@ public class ExamMaksManagement extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-            Intent home  = new Intent(this,MainActivity.class);
-            startActivity(home);
+        }else if(id == R.id.nav_performance) {
 
-        }else if(id == R.id.nav_searchMarks) {
-
-          getSupportFragmentManager().beginTransaction().replace(R.id.content_main,new SearchMarks()).commit();
-
-
-        }else if(id == R.id.nav_add_marks) {
-
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new marks_add()).commit();
-
-        }else if(id== R.id.nav_performance) {
-
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new Performance()).commit();
-
-        }else if(id == R.id.nav_logOut){
-            Intent login  = new Intent(this,Login.class);
-            startActivity(login);
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.student_main, new Performance()).commit();
+        }else if(id == R.id.nav_shutdown) {
+                Intent login = new Intent(this, Login.class);
+                startActivity(login);
         }
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

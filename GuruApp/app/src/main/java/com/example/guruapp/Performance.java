@@ -10,30 +10,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
-public class SearchMarks extends Fragment {
+public class Performance extends Fragment {
 
-//    EditText userName;
 //    @Override
-//    public void onCreate(Bundle savedInstanceState) {
+//    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-////        setContentView(R.layout.activity_search_marks);
-//        userName= findViewById
-//        password= findViewById(R.id.password);
+//        setContentView(R.layout.activity_performance);
 //    }
-
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_search_marks,container,false);
+        View v = inflater.inflate(R.layout.activity_performance,container,false);
 
         String [] values =
-                {"Galle","Mathara","Hambanthota",};
-        Spinner spinner = (Spinner) v.findViewById(R.id.centerSpinner);
+                {"GR_2014_1","GR_2014_2","GR_2014_3"};
+        Spinner spinner = (Spinner) v.findViewById(R.id.performaceTestId);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
@@ -42,6 +36,4 @@ public class SearchMarks extends Fragment {
 
         return v;
     }
-
-
 }
