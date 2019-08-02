@@ -1,6 +1,5 @@
 package com.example.guruapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -22,23 +21,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.widget.ImageView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
+public class FeesManagement extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
-
+        setContentView(R.layout.activity_fees_management);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        FloatingActionButton fab = findViewById(R.id.fab);
+//       FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -46,6 +39,7 @@ public class MainActivity extends AppCompatActivity
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -53,10 +47,7 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
-//        ImageView imageView = (ImageView) findViewById(R.id.myview);
-//        imageView.setImageResource(R.drawable.a);
-   }
+    }
 
     @Override
     public void onBackPressed() {
@@ -71,7 +62,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.fees_management, menu);
         return true;
     }
 
@@ -97,31 +88,24 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-
-
+            Intent home = new Intent(this,MainActivity.class);
             // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_add_fee_details) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.Fess_Management_content_main,new AddFeeDetails()).commit();
 
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
 
-        } else if(id==R.id.nav_exam_marks){
+        } else if (id == R.id.nav_search_fee_details) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.Fess_Management_content_main,new SearchFeeDetails()).commit();
 
-            Intent admin  = new Intent(this,ExamMaksManagement.class);
-            startActivity(admin);
+        } else if (id == R.id.nav_update_fee_details) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.Fess_Management_content_main,new UpdateFeeDetails()).commit();
 
-        }else if(id == R.id.nav_logOut) {
-            Intent login = new Intent(this, Login.class);
+        }else if(id == R.id.nav_logOut){
+            Intent login  = new Intent(this,Login.class);
             startActivity(login);
-        }else if(id == R.id.nav_fee){
-            Intent admin3 = new Intent(this,FeesManagement.class);
-            startActivity(admin3);
+
         }
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

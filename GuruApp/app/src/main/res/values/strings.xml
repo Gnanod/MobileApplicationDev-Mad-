@@ -35,4 +35,17 @@
     <string name="View">View</string>
     <string name="GuruApp">GuruApp</string>
     <string name="GuruAppWeb">www.GuruApp.lk</string>
+    <string name="feeManagement">Fee_Management</string>
+    <string name="title_activity_fee_management">FeeManagement</string>
+    <string name="title_activity_fees_management">FeesManagement</string>
+    <string name="AddFeeDetails">Add Fee Details</string>
+    <string name="UpdateFeeDetails">Update Fee Details</string>
+    <string name="SearchFeeDetails">Search Fee Details</string>
+    <string name="StudentID">Student_ID</string>
+    <string name="StudentName">Student Name</string>
+    <string name="Month">Month</string>
+    <string name="Type">Type</string>
+    <string name="Amount">Amount</string>
+    <string name="SearchFee">SearchFee</string>
+    <string name="Year">Year</string>
 </resources>
