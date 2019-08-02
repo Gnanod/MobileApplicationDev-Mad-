@@ -16,9 +16,8 @@
             android:id="@+id/textView4"
             android:layout_width="350dp"
             android:layout_height="50dp"
-            android:layout_marginStart="32dp"
             android:layout_marginTop="36dp"
-            
+            android:layout_gravity="center"
             android:text="SEARCH UPDATE DELETE USER"
             android:textSize="24sp"
             android:textStyle="bold" />
