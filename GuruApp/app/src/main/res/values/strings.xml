@@ -34,5 +34,6 @@
     <string name="testId">Test Id</string>
     <string name="View">View</string>
     <string name="GuruApp">GuruApp</string>
+    <string name="HomeGuruApp">GuruApp!</string>
     <string name="GuruAppWeb">www.GuruApp.lk</string>
 </resources>
