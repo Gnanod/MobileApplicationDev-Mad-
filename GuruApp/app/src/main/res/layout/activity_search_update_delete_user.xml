@@ -18,6 +18,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="36dp"
+            
             android:text="SEARCH UPDATE DELETE USER"
             android:textSize="24sp"
             android:textStyle="bold" />
