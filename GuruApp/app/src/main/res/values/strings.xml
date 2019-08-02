@@ -48,4 +48,13 @@
     <string name="Amount">Amount</string>
     <string name="SearchFee">SearchFee</string>
     <string name="Year">Year</string>
+    <string name="title_activity_user_management">UserManagement</string>
+    <string name="UserManagement">UserManagement</string>
+    <string name="AddUser">Add User</string>
+    <string name="SearchUpdateDelete">Search User</string>
+    <string name="UserID">ID</string>
+    <string name="UserName">Name</string>
+    <string name="Phone">Phone Number</string>
+    <string name="Email">name@gmail.com</string>
+    <string name="Subject">Subject</string>
 </resources>

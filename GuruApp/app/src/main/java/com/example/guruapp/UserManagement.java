@@ -1,51 +1,38 @@
 package com.example.guruapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
-import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-
-import android.view.MenuItem;
-
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.view.Menu;
-import android.widget.ImageView;
-import android.widget.Toast;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity
+public class UserManagement extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
-
+        setContentView(R.layout.activity_user_management);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -53,10 +40,7 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
-//        ImageView imageView = (ImageView) findViewById(R.id.myview);
-//        imageView.setImageResource(R.drawable.a);
-   }
+    }
 
     @Override
     public void onBackPressed() {
@@ -71,7 +55,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.user_management, menu);
         return true;
     }
 
@@ -109,23 +93,13 @@ public class MainActivity extends AppCompatActivity
 //        } else if (id == R.id.nav_share) {
 //
 //        } else if (id == R.id.nav_send) {
-
-        } else if(id==R.id.nav_exam_marks) {
-
-            Intent admin = new Intent(this, ExamMaksManagement.class);
-            startActivity(admin);
+//
+        }else if (id == R.id.nav_add_user) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_management, new AddUser()).commit();
+        }else if (id == R.id.nav_edit_user){
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_management, new SearchUpdateDeleteUser()).commit();
         }
-        else if(id==R.id.nav_User_Management){
-            Intent admin1 = new Intent(this,UserManagement.class);
-            startActivity(admin1);
 
-        }else if(id == R.id.nav_logOut) {
-            Intent login = new Intent(this, Login.class);
-            startActivity(login);
-        }else if(id == R.id.nav_fee){
-            Intent admin3 = new Intent(this,FeesManagement.class);
-            startActivity(admin3);
-        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

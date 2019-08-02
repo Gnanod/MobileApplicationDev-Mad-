@@ -12,6 +12,12 @@
             android:id="@+id/nav_exam_marks"
             android:icon="@drawable/ic_assessment_black_24dp"
             android:title="@string/ExamMarkManagement" />
+
+        <item
+            android:id="@+id/nav_User_Management"
+            android:icon="@drawable/ic_user_management"
+            android:title="@string/UserManagement" />
+
         <item
             android:id="@+id/nav_fee"
             android:icon="@drawable/ic_fee_management"
