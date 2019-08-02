@@ -34,6 +34,7 @@
     <string name="testId">Test Id</string>
     <string name="View">View</string>
     <string name="GuruApp">GuruApp</string>
+    <string name="HomeGuruApp">GuruApp!</string>
     <string name="GuruAppWeb">www.GuruApp.lk</string>
     <string name="feeManagement">Fee_Management</string>
     <string name="title_activity_fee_management">FeeManagement</string>
