@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Performance"></activity>
+        <activity android:name=".UserManagementHome"></activity>
+        <activity android:name=".SearchUpdateDeleteUser" />
+        <activity
+            android:name=".UserManagement"
+            android:label="@string/title_activity_user_management"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddUser" />
+        <activity android:name=".EditUser" />
+        <activity android:name=".Performance" />
         <activity
             android:name=".StudentActivity"
             android:label="@string/title_activity_student"
