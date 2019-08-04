@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Search_Marks_New">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="498dp"
+        android:baselineAligned="false"
+        android:text="@string/SearchandUpdate"
+        android:textColor="@color/Black"
+        android:textSize="80px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="146dp"
+        android:layout_height="64dp"
+        android:text="TextView"
+
+        />
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView9"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="30dp"-->
+    <!---->
+    <!---->
+    <!--android:text="@string/ExamId"-->
+    <!--android:textSize="50px"-->
+    <!--android:textAlignment="textEnd"-->
+    <!--/>-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/editText16"-->
+    <!--android:layout_width="207dp"-->
+    <!--android:layout_height="47dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="31dp"-->
+    <!--android:layout_marginEnd="46dp"-->
+    <!--android:layout_marginBottom="423dp"-->
+    <!--android:ems="10"-->
+    <!--android:textSize="50px"-->
+    <!--android:inputType="textPersonName"-->
+    <!--android:hint="@string/ExamId"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView11"-->
+    <!--android:layout_width="104dp"-->
+    <!--android:layout_height="34dp"-->
+    <!--android:layout_marginStart="38dp"-->
+    <!--android:layout_marginTop="33dp"-->
+    <!--android:layout_marginEnd="25dp"-->
+    <!--android:layout_marginBottom="357dp"-->
+    <!--android:hint="@string/StudentId"-->
+    <!--android:textSize="50px"-->
+    <!--android:textAlignment="textEnd"-->
+    <!--/>-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/editText18"-->
+    <!--android:layout_width="207dp"-->
+    <!--android:layout_height="47dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:layout_marginEnd="46dp"-->
+    <!--android:layout_marginBottom="359dp"-->
+    <!--android:ems="10"-->
+    <!--android:textSize="50px"-->
+    <!--android:inputType="textPersonName"-->
+    <!--android:hint="@string/StudentId"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btnSearch"-->
+    <!--android:layout_width="113dp"-->
+    <!--android:layout_height="41dp"-->
+    <!--android:layout_marginStart="167dp"-->
+    <!--android:layout_marginTop="17dp"-->
+    <!--android:layout_marginEnd="131dp"-->
+    <!--android:layout_marginBottom="310dp"-->
+    <!--android:text="@string/Search"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView10"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="29dp"-->
+    <!--android:layout_marginStart="38dp"-->
+    <!--android:layout_marginTop="86dp"-->
+    <!--android:layout_marginEnd="25dp"-->
+    <!--android:layout_marginBottom="251dp"-->
+    <!--android:textAlignment="textEnd"-->
+    <!--android:textSize="50px"-->
+    <!--android:text="@string/ExamId"-->
+    <!--/>-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/updateExamId"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:layout_marginEnd="46dp"-->
+    <!--android:layout_marginBottom="249dp"-->
+    <!--android:ems="10"-->
+    <!--android:textSize="50px"-->
+    <!--android:inputType="textPersonName"-->
+    <!--android:hint="@string/ExamId"-->
+    <!--/>-->
+
+
+    <!--<EditText-->
+    <!--android:id="@+id/editText6"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="24dp"-->
+    <!--android:layout_marginEnd="46dp"-->
+    <!--android:layout_marginBottom="180dp"-->
+    <!--android:ems="10"-->
+    <!--android:textSize="50px"-->
+    <!--android:inputType="textPersonName"-->
+    <!--android:hint="@string/StudentId"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView14"-->
+    <!--android:layout_width="104dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_marginStart="38dp"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--android:layout_marginEnd="25dp"-->
+    <!--android:layout_marginBottom="181dp"-->
+    <!--android:textAlignment="textEnd"-->
+    <!--android:text="@string/StudentId"-->
+    <!--android:textSize="50px"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView15"-->
+    <!--android:layout_width="98dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginStart="38dp"-->
+    <!--android:layout_marginTop="35dp"-->
+    <!--android:layout_marginEnd="25dp"-->
+    <!--android:layout_marginBottom="121dp"-->
+    <!--android:textAlignment="textEnd"-->
+    <!--android:text="@string/ExamMark"-->
+    <!--android:textSize="50px"-->
+    <!--/>-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/editText7"-->
+    <!--android:layout_width="196dp"-->
+    <!--android:layout_height="53dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_marginEnd="46dp"-->
+    <!--android:layout_marginBottom="119dp"-->
+    <!--android:ems="10"-->
+    <!--android:hint="@string/ExamMark"-->
+    <!--android:inputType="textPersonName"-->
+    <!--android:textSize="50px"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView16"-->
+    <!--android:layout_width="107dp"-->
+    <!--android:layout_height="27dp"-->
+    <!--android:layout_marginStart="38dp"-->
+    <!--android:layout_marginTop="31dp"-->
+    <!--android:layout_marginEnd="25dp"-->
+    <!--android:layout_marginBottom="64dp"-->
+    <!--android:text="@string/Center"-->
+    <!--android:textAlignment="textEnd"-->
+    <!--android:textSize="50px"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button3"-->
+    <!--android:layout_width="93dp"-->
+    <!--android:layout_height="41dp"-->
+    <!--android:layout_marginStart="161dp"-->
+    <!--android:layout_marginTop="19dp"-->
+    <!--android:layout_marginEnd="26dp"-->
+    <!--android:layout_marginBottom="4dp"-->
+    <!--android:text="@string/Update"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button7"-->
+    <!--android:layout_width="93dp"-->
+    <!--android:layout_height="41dp"-->
+    <!--android:layout_marginStart="26dp"-->
+    <!--android:layout_marginTop="22dp"-->
+    <!--android:layout_marginEnd="42dp"-->
+    <!--android:layout_marginBottom="4dp"-->
+    <!--android:text="@string/Delete"-->
+    <!--/>-->
+
+
+</LinearLayout>

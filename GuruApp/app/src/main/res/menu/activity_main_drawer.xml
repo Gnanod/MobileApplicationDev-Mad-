@@ -25,6 +25,10 @@
             android:icon="@drawable/ic_fee_management"
             android:title="FeeManagement" />
         <item
+            android:id="@+id/nav_student_details"
+            android:icon="@drawable/ic_student_management"
+            android:title="StudentManagement"/>
+        <item
             android:id="@+id/nav_logOut"
             android:icon="@drawable/ic_shut_down"
             android:title="@string/shutDown" />
