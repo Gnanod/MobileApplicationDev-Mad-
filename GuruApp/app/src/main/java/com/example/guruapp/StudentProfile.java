@@ -103,6 +103,9 @@ public class StudentProfile extends AppCompatActivity
 
             getSupportFragmentManager().beginTransaction().replace(R.id.user_profileDetails,new SearchFeeDetails()).commit();
 
+        }else if(id == R.id.nav_logOut){
+            Intent login = new Intent(this, Login.class);
+            startActivity(login);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

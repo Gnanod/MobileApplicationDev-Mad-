@@ -103,16 +103,16 @@ public class ExamMaksManagement extends AppCompatActivity
 
         }else if(id == R.id.nav_searchMarks) {
 
-          getSupportFragmentManager().beginTransaction().replace(R.id.content_main,new SearchMarks()).commit();
+          getSupportFragmentManager().beginTransaction().replace(R.id.Exam_Mark_content_main,new SearchMarks()).commit();
 
 
         }else if(id == R.id.nav_add_marks) {
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new marks_add()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.Exam_Mark_content_main, new marks_add()).commit();
 
         }else if(id== R.id.nav_performance) {
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new Performance()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.Exam_Mark_content_main, new Performance()).commit();
 
         }else if(id == R.id.nav_logOut){
             Intent login  = new Intent(this,Login.class);

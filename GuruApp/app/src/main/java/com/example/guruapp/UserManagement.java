@@ -84,26 +84,20 @@ public class UserManagement extends AppCompatActivity
             Intent home  = new Intent(this,MainActivity.class);
             startActivity(home);
 
-//dfsf
-            // Handle the camera action
-//        }
-//        else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_tools) {
-
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
 //
         }else if (id == R.id.nav_add_user) {
+
             getSupportFragmentManager().beginTransaction().replace(R.id.user_management, new AddUser()).commit();
+
         }else if (id == R.id.nav_edit_user){
+
             getSupportFragmentManager().beginTransaction().replace(R.id.user_management, new SearchUpdateDeleteUser()).commit();
+
         }else if(id == R.id.nav_logOut) {
+
             Intent login = new Intent(this, Login.class);
             startActivity(login);
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

@@ -99,17 +99,6 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
 
 
-            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_tools) {
-
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-
         } else if(id==R.id.nav_exam_marks) {
 
             Intent admin = new Intent(this, ExamMaksManagement.class);
@@ -123,14 +112,15 @@ public class MainActivity extends AppCompatActivity
             Intent login = new Intent(this, Login.class);
             startActivity(login);
         }else if(id == R.id.nav_fee){
+
             Intent admin3 = new Intent(this,FeesManagement.class);
             startActivity(admin3);
         }
-//        else if(id==R.id.nav_student_details) {
-//
-//            Intent admin2 = new Intent(this, StudentProfile.cl);
-//            startActivity(admin2);
-//        }
+        else if(id==R.id.nav_student_details) {
+
+            Intent admin2 = new Intent(this, StudentActivity.class);
+            startActivity(admin2);
+        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

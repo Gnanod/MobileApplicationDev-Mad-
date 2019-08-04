@@ -11,15 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-
-public class Search_Marks_New extends Fragment {
+public class home_fees_management extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.search__marks__new, container, false);
+        return inflater.inflate(R.layout.fragment_home_fees_management, container, false);
     }
 
 
