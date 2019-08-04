@@ -71,7 +71,10 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="search">Search</string>
+    <string name="Profile">Profile</string>
+    <string name="FeeDetails">Fee Details</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_student_profile">StudentProfile</string>
 </resources>

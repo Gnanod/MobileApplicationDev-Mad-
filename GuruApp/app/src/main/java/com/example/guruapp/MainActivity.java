@@ -125,11 +125,12 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.nav_fee){
             Intent admin3 = new Intent(this,FeesManagement.class);
             startActivity(admin3);
-        }else if(id==R.id.nav_student_details) {
-
-            Intent admin2 = new Intent(this, StudentActivity.class);
-            startActivity(admin2);
         }
+//        else if(id==R.id.nav_student_details) {
+//
+//            Intent admin2 = new Intent(this, StudentProfile.cl);
+//            startActivity(admin2);
+//        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

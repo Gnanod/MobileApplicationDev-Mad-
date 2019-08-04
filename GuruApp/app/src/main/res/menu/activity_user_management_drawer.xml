@@ -20,6 +20,10 @@
             android:title="@string/SearchUpdateDelete" />
 
 
+        <item
+            android:id="@+id/nav_logOut"
+            android:icon="@drawable/ic_shut_down"
+            android:title="@string/shutDown" />
 
     </group>
 

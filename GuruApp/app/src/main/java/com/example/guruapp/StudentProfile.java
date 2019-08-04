@@ -2,27 +2,33 @@ package com.example.guruapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-public class UserManagement extends AppCompatActivity
+import android.view.View;
+
+import androidx.core.view.GravityCompat;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+
+import android.view.MenuItem;
+
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import android.view.Menu;
+
+public class StudentProfile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_management);
+        setContentView(R.layout.student_profile);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -55,7 +61,7 @@ public class UserManagement extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.user_management, menu);
+        getMenuInflater().inflate(R.menu.student_profile, menu);
         return true;
     }
 
@@ -81,29 +87,22 @@ public class UserManagement extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent home  = new Intent(this,MainActivity.class);
-            startActivity(home);
 
+            Intent profile = new Intent(this,StudentProfile.class);
+            startActivity(profile);
 
-            // Handle the camera action
-//        }
-//        else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_tools) {
+        }else if(id== R.id.nav_performance) {
 
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-        }else if (id == R.id.nav_add_user) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.user_management, new AddUser()).commit();
-        }else if (id == R.id.nav_edit_user){
-            getSupportFragmentManager().beginTransaction().replace(R.id.user_management, new SearchUpdateDeleteUser()).commit();
-        }else if(id == R.id.nav_logOut) {
-            Intent login = new Intent(this, Login.class);
-            startActivity(login);
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_profileDetails, new Performance()).commit();
+
+        }else if(id == R.id.nav_profileDetails){
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_profileDetails, new ViewStudentProfile()).commit();
+
+        }else if(id == R.id.nav_search_fee_details){
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_profileDetails,new SearchFeeDetails()).commit();
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
