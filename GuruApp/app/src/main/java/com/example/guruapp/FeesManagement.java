@@ -88,7 +88,9 @@ public class FeesManagement extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent home = new Intent(this,MainActivity.class);
+            Intent home  = new Intent(this,MainActivity.class);
+            startActivity(home);
+
             // Handle the camera action
         } else if (id == R.id.nav_add_fee_details) {
             getSupportFragmentManager().beginTransaction().replace(R.id.Fess_Management_content_main,new AddFeeDetails()).commit();

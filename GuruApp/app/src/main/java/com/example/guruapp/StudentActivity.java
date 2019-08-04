@@ -2,25 +2,16 @@ package com.example.guruapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import android.view.View;
-
-import androidx.core.view.GravityCompat;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-
+import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.view.Menu;
+import com.google.android.material.navigation.NavigationView;
 
 public class StudentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -87,10 +78,20 @@ public class StudentActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
+            Intent home = new Intent(this, MainActivity.class);
+            startActivity(home);
 
-        }else if(id == R.id.nav_performance) {
+        }else if(id == R.id.nav_add_students) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.student_main, new AddStudents()).commit();
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.student_main, new Performance()).commit();
+
+        }else if(id == R.id.nav_search_students) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.student_main, new SearchStudent()).commit();
+
+        }else if(id == R.id.nav_update_students){
+            getSupportFragmentManager().beginTransaction().replace(R.id.student_main,new UpdateStudent()).commit();
+
+
         }else if(id == R.id.nav_shutdown) {
                 Intent login = new Intent(this, Login.class);
                 startActivity(login);

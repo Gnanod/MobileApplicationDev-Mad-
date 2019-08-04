@@ -14,15 +14,15 @@
             android:label="@string/title_activity_fees_management"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <!-- <activity android:name=".Performance" /> -->
-        <activity android:name=".UserManagementHome"></activity>
-        <activity android:name=".SearchUpdateDeleteUser" />
+        <!--<activity android:name=".UserManagementHome"></activity>-->
+        <!--<activity android:name=".SearchUpdateDeleteUser" />-->
         <activity
             android:name=".UserManagement"
             android:label="@string/title_activity_user_management"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddUser" />
-        <activity android:name=".EditUser" />
-        <activity android:name=".Performance" />
+        <!--<activity android:name=".AddUser" />-->
+        <!--<activity android:name=".EditUser" />-->
+        <!--<activity android:name=".Performance" />-->
         <activity
             android:name=".StudentActivity"
             android:label="@string/title_activity_student"
@@ -44,7 +44,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+
+        </activity>
     </application>
 
 </manifest>
