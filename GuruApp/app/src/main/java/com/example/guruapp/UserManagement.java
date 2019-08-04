@@ -84,7 +84,7 @@ public class UserManagement extends AppCompatActivity
             Intent home  = new Intent(this,MainActivity.class);
             startActivity(home);
 
-
+//dfsf
             // Handle the camera action
 //        }
 //        else if (id == R.id.nav_gallery) {
