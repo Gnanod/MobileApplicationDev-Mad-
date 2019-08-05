@@ -141,7 +141,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="32dp"
-            android:backgroundTint="@color/button"
+            android:background="@color/btnColor"
             android:text="ADD"
             android:textStyle="bold" />
     </LinearLayout>

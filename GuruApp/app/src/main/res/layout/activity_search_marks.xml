@@ -120,7 +120,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+        app:layout_constraintTop_toBottomOf="@+id/editText18"
+        android:background="@color/btnColor"
+        />
 
     <TextView
         android:id="@+id/textView10"
@@ -250,7 +252,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/centerSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/centerSpinner"
+        android:background="@color/btnColor"
+        />
 
     <Button
         android:id="@+id/button7"
@@ -264,7 +268,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/centerSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/centerSpinner"
+        android:background="@color/btnColor"
+        />
 
     <!--ttt-->
 

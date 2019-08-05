@@ -3,16 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home_exam_mark_management">
+    tools:context=".home_exam_mark_management"
+
+    >
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ex"
         android:layout_width="349dp"
         android:layout_height="300dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="180dp"
         android:layout_marginEnd="10dp"
-        android:src="@drawable/homepageimage"
+        android:src="@drawable/homeexammarksmanagement"
          />
 
     <TextView
@@ -29,18 +31,17 @@
         tools:layout_editor_absoluteY="53dp" />
 
 
-
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="250dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="-210dp"
+        android:layout_width="387dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="-300dp"
         android:layout_marginTop="90dp"
         android:background="#00090808"
         android:fontFamily="cursive"
-        android:text="Exam Mark Management"
-        android:textSize="40dp"
+        android:text="@string/examMark"
         android:textColor="#212121"
+        android:textSize="40dp"
         tools:layout_editor_absoluteY="53dp" />
 
 </LinearLayout>

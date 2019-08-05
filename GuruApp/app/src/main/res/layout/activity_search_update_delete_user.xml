@@ -47,6 +47,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:ems="10"
+            android:background="@color/btnColor"
             android:text="SEARCH" />
 
 
@@ -151,7 +152,7 @@
             android:layout_gravity="left"
             android:layout_marginTop="32dp"
             android:layout_marginLeft="80dp"
-            android:backgroundTint="@color/button"
+            android:background="@color/btnColor"
             android:text="UPDATE"
             android:textStyle="bold" />
 
@@ -162,8 +163,8 @@
             android:layout_gravity="right"
             android:layout_marginTop="-50dp"
             android:layout_marginRight="80dp"
-            android:backgroundTint="@color/button"
             android:text="DELETE"
+            android:background="@color/btnColor"
             android:textStyle="bold" />
 
     </LinearLayout>

@@ -11,7 +11,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
 
-        android:text="Search Student"
+        android:text="@string/searchstudents"
         android:textColor="#1D2222"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -176,6 +176,7 @@
                 android:background="#ffffff"
                 android:gravity="center"
                 android:textStyle="bold" />
+
         </TableRow>
 
 
@@ -186,6 +187,6 @@
         android:layout_width="231dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:background="#57A39C"
+        android:background="@color/btnColor"
         android:text="@string/Search" />
 </LinearLayout>

@@ -16,9 +16,9 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="22dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Add Fee Details"
+        android:text="@string/headerFee"
         android:textAlignment="viewStart"
-        android:textColor="#009688"
+        android:textColor="@color/Black"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -91,7 +91,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="80dp"
-        android:background="#1AB3A2"
-        android:text="Save Details"
+        android:background="@color/btnColor"
+        android:text="@string/savedetails"
         android:textColor="@android:color/black" />
 </LinearLayout>

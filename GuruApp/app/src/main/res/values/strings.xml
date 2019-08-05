@@ -73,8 +73,10 @@
     <string name="search">Search</string>
     <string name="Profile">Profile</string>
     <string name="FeeDetails">Fee Details</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_student_profile">StudentProfile</string>
+    <string name="examMark">Exam Mark Management</string>
+<string name="headerFee">Add Fee Details</string>
+    <string name="savedetails">Save Details</string>
+    <string name="searchfeedetails">Search Fee Details</string>
+    <string name="searchstudents">Search Student</string>
+    <string name="title_activity_student_profile">Student Profile</string>
 </resources>

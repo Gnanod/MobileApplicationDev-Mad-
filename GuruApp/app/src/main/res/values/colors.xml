@@ -7,4 +7,7 @@
     <color name="Black">#000000</color>
     <color name="button">#8D6E63</color>
     <color name="appBar">#880e4f</color>
+    <color name="btnColor">#1AB3A2</color>
+
+
 </resources>
