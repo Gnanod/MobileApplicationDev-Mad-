@@ -82,4 +82,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="adduser">ADD USER</string>
+    <string name="userid">User ID :</string>
+    <string name="username">User Name :</string>
+    <string name="userphone">Phone :</string>
+    <string name="useremail">Email :</string>
+    <string name="usersubject">Subject :</string>
+    <string name="userpassword">Password :</string>
+    <string name="buttonadd">ADD</string>
+    <string name="buttonsearch">SEARCH</string>
+    <string name="buttonupdate">UPDATE</string>
+    <string name="buttondelete">DELETE</string>
+    <string name="searchdeleteupdateuser">SEARCH UPDATE DELETE USER</string>
 </resources>
