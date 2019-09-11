@@ -18,7 +18,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="Update Fee Details"
         android:textAlignment="viewStart"
-        android:textColor="#009688"
+        android:textColor="@color/Black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,10 +113,10 @@
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="125dp"
-        android:layout_height="47dp"
-        android:background="#1AB3A2"
+        android:id="@+id/btnSave"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_rounded_corner_button"
         android:text="Update Details"
         android:textColor="@android:color/black"
         android:layout_marginStart="145dp"
