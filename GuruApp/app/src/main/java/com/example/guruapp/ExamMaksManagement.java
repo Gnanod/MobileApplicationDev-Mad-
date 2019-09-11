@@ -103,8 +103,8 @@ public class ExamMaksManagement extends AppCompatActivity
 
         }else if(id == R.id.nav_searchMarks) {
 
-          getSupportFragmentManager().beginTransaction().replace(R.id.Exam_Mark_content_main,new SearchMarks()).commit();
-
+//          getSupportFragmentManager().beginTransaction().replace(R.id.Exam_Mark_content_main,new SearchMarks()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.Exam_Mark_content_main,new new_activity_search_update_marks()).commit();
 
         }else if(id == R.id.nav_add_marks) {
 

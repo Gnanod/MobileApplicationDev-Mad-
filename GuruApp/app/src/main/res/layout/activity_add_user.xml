@@ -18,7 +18,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="45dp"
-            android:text="ADD USER"
+            android:text="@string/adduser"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
-            android:text="User ID :"
+            android:text="@string/userid"
             android:textSize="18sp" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="User Name :"
+            android:text="@string/username"
             android:textSize="18sp" />
 
         <TextView
@@ -46,16 +46,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Phone :"
+            android:text="@string/userphone"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textView"
             android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Email :"
+            android:text="@string/useremail"
             android:textSize="18sp" />
 
         <TextView
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Subject :"
+            android:text="@string/usersubject"
             android:textSize="18sp" />
 
         <TextView
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Password :"
+            android:text="@string/userpassword"
             android:textSize="18sp" />
 
         <EditText
@@ -142,7 +142,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="32dp"
             android:background="@color/btnColor"
-            android:text="ADD"
+            android:text="@string/buttonadd"
             android:textStyle="bold" />
     </LinearLayout>
 

@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textView"
         android:layout_width="104dp"
         android:layout_height="30dp"
         android:layout_marginStart="38dp"
@@ -38,12 +38,12 @@
         android:text="@string/ExamId"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText16"
+        app:layout_constraintEnd_toStartOf="@+id/searchExamId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
-        android:id="@+id/editText16"
+        android:id="@+id/searchExamId"
         android:layout_width="207dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -55,7 +55,7 @@
         android:hint="@string/ExamId"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
@@ -69,12 +69,12 @@
         android:text="@string/StudentId"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText18"
+        app:layout_constraintEnd_toStartOf="@+id/searchStudentId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editText18"
+        android:id="@+id/searchStudentId"
         android:layout_width="207dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -87,7 +87,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/editText16" />
+        app:layout_constraintTop_toBottomOf="@+id/searchExamId" />
 
     <TextView
         android:id="@+id/textView12"
@@ -100,12 +100,12 @@
         android:text="@string/ExamMark"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText19"
+        app:layout_constraintEnd_toStartOf="@+id/txtExamMarksG"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <EditText
-        android:id="@+id/editText19"
+        android:id="@+id/txtExamMarksG"
         android:layout_width="205dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -118,7 +118,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+        app:layout_constraintTop_toBottomOf="@+id/searchStudentId" />
 
     <TextView
         android:id="@+id/textView2"
@@ -131,12 +131,12 @@
         android:text="@string/Center"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintEnd_toStartOf="@+id/txtExamCenterG"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/txtExamCenterG"
         android:layout_width="205dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -146,21 +146,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editText19" />
+        app:layout_constraintTop_toBottomOf="@+id/txtExamMarksG" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSaveG"
         android:layout_width="136dp"
         android:layout_height="47dp"
         android:layout_marginStart="170dp"
         android:layout_marginTop="42dp"
         android:layout_marginEnd="106dp"
-        android:layout_marginBottom="143dp"
-        android:text="@string/Save"
         android:background="@color/btnColor"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/Save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/txtExamCenterG" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
