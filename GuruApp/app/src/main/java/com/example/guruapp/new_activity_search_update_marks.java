@@ -163,7 +163,7 @@ public class new_activity_search_update_marks extends Fragment {
               String updateExamMarks = updateExamMarksObject.getText().toString();
 
               ExamMarkDTO e = new ExamMarkDTO();
-              e.setMarkId(Integer.parseInt(updateId));
+              e.setMarkId(Integer.parseInt(updateId.trim()));
               e.setStudent_Id(updateStudentId);
               e.setExam_ID(updateExamId);
               e.setStudent_Marks(Double.parseDouble(updateExamMarks));
