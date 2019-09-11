@@ -90,7 +90,7 @@
             android:inputType="phone" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textView"
             android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
