@@ -18,7 +18,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="36dp"
             android:layout_gravity="center"
-            android:text="SEARCH UPDATE DELETE USER"
+            android:text="@string/searchdeleteupdateuser"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="16dp"
-            android:text="User ID :"
+            android:text="@string/userid"
             android:textSize="18sp" />
 
         <EditText
@@ -48,7 +48,7 @@
             android:layout_marginTop="15dp"
             android:ems="10"
             android:background="@color/btnColor"
-            android:text="SEARCH" />
+            android:text="@string/buttonsearch" />
 
 
         <TextView
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="User Name :"
+            android:text="@string/username"
             android:textSize="18sp" />
 
         <EditText
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Phone :"
+            android:text="@string/userphone"
             android:textSize="18sp" />
 
         <EditText
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Email :"
+            android:text="@string/useremail"
             android:textSize="18sp" />
 
         <EditText
@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Subject :"
+            android:text="@string/usersubject"
             android:textSize="18sp" />
 
         <EditText
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
             android:layout_marginTop="25dp"
-            android:text="Password :"
+            android:text="@string/userpassword"
             android:textSize="18sp" />
 
         <EditText
@@ -153,7 +153,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginLeft="80dp"
             android:background="@color/btnColor"
-            android:text="UPDATE"
+            android:text="@string/buttonupdate"
             android:textStyle="bold" />
 
         <Button
@@ -163,7 +163,7 @@
             android:layout_gravity="right"
             android:layout_marginTop="-50dp"
             android:layout_marginRight="80dp"
-            android:text="DELETE"
+            android:text="@string/buttondelete"
             android:background="@color/btnColor"
             android:textStyle="bold" />
 

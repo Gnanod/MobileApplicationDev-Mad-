@@ -66,13 +66,4 @@
         android:background="@color/btnColor"
         android:text="@string/Update" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="154dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="-50dp"
-        android:background="@color/btnColor"
-        android:text="@string/Delete" />
-
 </LinearLayout>
