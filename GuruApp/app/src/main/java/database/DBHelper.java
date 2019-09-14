@@ -1,4 +1,4 @@
-package database;
+package Database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,141 +6,168 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.guruapp.marks_add;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import model.UserDTO;
+import Model.ExamMarkDTO;
 
 public class DBHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "guruapp.db";
+
+
+    private  static final String DATABASE_NAME = "GuruApp.db";
+
 
     public DBHelper(Context context) {
 
         super(context, DATABASE_NAME, null, 1);
+
     }
+
+
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-        String sqlCreateTable = "CREATE TABLE "+UserMaster.users.TABLE_NAME+" ("+
-                UserMaster.users._ID+" TEXT PRIMARY KEY,"+
-                UserMaster.users.COLUMN_NAME+ " TEXT,"+
-                UserMaster.users.COLUMN_PHONE+ " TEXT," +
-                UserMaster.users.COLUMN_MAIL+ " TEXT," +
-                UserMaster.users.COLUMN_SUBJECT+ " TEXT," +
-                UserMaster.users.COLUMN_PASSWORD+" TEXT)";
+        String CreateExamMarksTableSQL = "CREATE TABLE "+ExamMarks.Marks.TABLE_Name+" ("+
 
+                ExamMarks.Marks.MARK_ID+" INTEGER PRIMARY KEY  AUTOINCREMENT,"+
+                ExamMarks.Marks.Exam_ID+" Text,"+
+                ExamMarks.Marks.Student_Id +" Text,"+
+                ExamMarks.Marks.Student_Center+" Text,"+
+                ExamMarks.Marks.Student_Marks+" Real)";
 
+        sqLiteDatabase.execSQL(CreateExamMarksTableSQL);
 
-        sqLiteDatabase.execSQL(sqlCreateTable);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
+        sqLiteDatabase.execSQL("DROP TABLE IF exists "+ExamMarks.Marks.TABLE_Name);
+        onCreate(sqLiteDatabase);
     }
 
-    public boolean addUser(UserDTO dto){
-                SQLiteDatabase db = getWritableDatabase();
+    public boolean SaveMarkDetails(ExamMarkDTO examMarksDto){
+
+        SQLiteDatabase db = getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        
-        values.put(UserMaster.users._ID,dto.getUserID());
-        values.put(UserMaster.users.COLUMN_NAME,dto.getUserName());
-        values.put(UserMaster.users.COLUMN_PHONE,dto.getUserPhone());
-        values.put(UserMaster.users.COLUMN_MAIL,dto.getUserMail());
-        values.put(UserMaster.users.COLUMN_SUBJECT,dto.getUserSubject());
-        values.put(UserMaster.users.COLUMN_PASSWORD,dto.getUserPassword());
+        values.put(ExamMarks.Marks.Exam_ID,examMarksDto.getExam_ID());
+        values.put(ExamMarks.Marks.Student_Id,examMarksDto.getStudent_Id());
+        values.put(ExamMarks.Marks.Student_Center,examMarksDto.getStudent_Center());
+        values.put(ExamMarks.Marks.Student_Marks,examMarksDto.getStudent_Marks());
 
-        long newuser = db.insert(UserMaster.users.TABLE_NAME,null,values);
+        long result= db.insert(ExamMarks.Marks.TABLE_Name,null,values);
 
-        if(newuser>0){
+        if(result>0){
             return true;
+
         }else{
             return false;
         }
+
     }
 
+    public List<ExamMarkDTO> searchMarksDetails(String examId,String studentId){
 
-    public List<UserDTO> searchUser(String userID){
-                SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase db  = getReadableDatabase();
 
-                String [] projection ={
-                      UserMaster.users.COLUMN_NAME,
-                      UserMaster.users.COLUMN_PHONE,
-                      UserMaster.users.COLUMN_MAIL,
-                      UserMaster.users.COLUMN_SUBJECT,
-                      UserMaster.users.COLUMN_PASSWORD
-                };
+        String [] projection ={
+                ExamMarks.Marks.MARK_ID,
+                ExamMarks.Marks.Student_Id,
+                ExamMarks.Marks.Exam_ID,
+                ExamMarks.Marks.Student_Marks,
+                ExamMarks.Marks.Student_Center
+        };
 
-                String selection = UserMaster.users._ID +"= ?";
+        String selection = ExamMarks.Marks.Exam_ID + " = ? and "+ ExamMarks.Marks.Student_Id + " = ?";
 
-                String []selectionArgs = {userID};
+        String []selectionArgs = {examId,studentId};
 
-        Cursor cursor = db.query(UserMaster.users.TABLE_NAME,projection,selection,selectionArgs,null,null,null);
+        Cursor cursor = db.query(ExamMarks.Marks.TABLE_Name,projection ,selection,selectionArgs,null,null,null);
 
-        List<UserDTO> usersList = new ArrayList<>();
 
-        while(cursor.moveToNext()){
+        List<ExamMarkDTO> examMarksList = new ArrayList<>();
 
-            UserDTO ud = new UserDTO();
 
-           // ud.setUserID(cursor.getString(cursor.getColumnIndexOrThrow(UserMaster.users._ID)));
-            ud.setUserName(cursor.getString(cursor.getColumnIndexOrThrow(UserMaster.users.COLUMN_NAME)));
-            ud.setUserPhone(cursor.getString(cursor.getColumnIndexOrThrow(UserMaster.users.COLUMN_PHONE)));
-            ud.setUserMail(cursor.getString(cursor.getColumnIndexOrThrow(UserMaster.users.COLUMN_MAIL)));
-            ud.setUserSubject(cursor.getString(cursor.getColumnIndexOrThrow(UserMaster.users.COLUMN_SUBJECT)));
-            ud.setUserPassword(cursor.getString(cursor.getColumnIndexOrThrow(UserMaster.users.COLUMN_PASSWORD)));
+        while(cursor.moveToNext()) {
 
-            usersList.add(ud);
+            ExamMarkDTO d = new ExamMarkDTO();
+
+            d.setStudent_Id(cursor.getString(cursor.getColumnIndexOrThrow(ExamMarks.Marks.Exam_ID)));
+            d.setStudent_Center(cursor.getString(cursor.getColumnIndexOrThrow(ExamMarks.Marks.Student_Center)));
+            double marks = Double.parseDouble(cursor.getString(cursor.getColumnIndexOrThrow(ExamMarks.Marks.Student_Marks)));
+            d.setStudent_Marks(marks);
+            d.setExam_ID(cursor.getString(cursor.getColumnIndexOrThrow(ExamMarks.Marks.Exam_ID)));
+            int autoId = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(ExamMarks.Marks.MARK_ID)));
+            d.setMarkId(autoId);
+
+            examMarksList.add(d);
+
         }
-
         cursor.close();
 
-        return usersList;
+
+        return examMarksList;
+
     }
 
+    public int deleteMarks(String deleteId) {
 
-    public boolean updateUser(UserDTO newdto){
+        SQLiteDatabase db = getReadableDatabase();
 
-        SQLiteDatabase db = getWritableDatabase();
+        String selection = ExamMarks.Marks.MARK_ID + " LIKE ?";
 
-        ContentValues values = new ContentValues();
+        System.out.println("DeleteID"+deleteId);
 
-        values.put(UserMaster.users._ID,newdto.getUserID());
-        values.put(UserMaster.users.COLUMN_NAME,newdto.getUserName());
-        values.put(UserMaster.users.COLUMN_PHONE,newdto.getUserPhone());
-        values.put(UserMaster.users.COLUMN_MAIL,newdto.getUserMail());
-        values.put(UserMaster.users.COLUMN_SUBJECT,newdto.getUserSubject());
-        values.put(UserMaster.users.COLUMN_PASSWORD,newdto.getUserPassword());
+        String [] selectionArgs = { deleteId.trim() };
 
-        String selection = UserMaster.users._ID + " LIKE ?";
-        String []selectionArgs ={newdto.getUserID()};
+        int deletedRows = db.delete(ExamMarks.Marks.TABLE_Name, selection, selectionArgs);
 
-        int upRow = db.update(UserMaster.users.TABLE_NAME,values,selection,selectionArgs);
-
-        if (upRow>0){
-            return true;
-        }else {
-            return false;
+        if(deletedRows > 0){
+            return 1;
+        }else{
+            return -1;
         }
     }
 
-    public boolean deleteUser(String delID){
 
-        SQLiteDatabase db = getWritableDatabase();
+    public boolean updateMarks(ExamMarkDTO marks){
 
-        String selection = UserMaster.users._ID + " LIKE ?";
-        String []selectionArgs = {delID.trim()};
 
-        int delRow = db.delete(UserMaster.users.TABLE_NAME,selection,selectionArgs);
+        SQLiteDatabase db = getReadableDatabase();
 
-        if (delRow>0){
+        ContentValues  values = new ContentValues();
+
+        values.put(ExamMarks.Marks.Student_Marks,marks.getStudent_Marks());
+        values.put(ExamMarks.Marks.Student_Center,marks.getStudent_Center());
+        values.put(ExamMarks.Marks.Student_Id,marks.getStudent_Id());
+        values.put(ExamMarks.Marks.Exam_ID,marks.getExam_ID());
+        values.put(ExamMarks.Marks.MARK_ID,marks.getMarkId());
+
+        String selection = ExamMarks.Marks.Exam_ID + " LIKE ?";
+        String[] selectionArgs = { marks.getExam_ID() };
+
+        int count = db.update(
+                ExamMarks.Marks.TABLE_Name,
+                values,
+                selection,
+                selectionArgs);
+
+        if(count>0){
+
             return true;
-        }else {
+
+        }else{
             return false;
         }
+
     }
+
+
+
 
 }
