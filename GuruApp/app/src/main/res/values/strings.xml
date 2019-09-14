@@ -74,11 +74,14 @@
     <string name="Profile">Profile</string>
     <string name="FeeDetails">Fee Details</string>
     <string name="examMark">Exam Mark Management</string>
-<string name="headerFee">Add Fee Details</string>
+    <string name="headerFee">Add Fee Details</string>
     <string name="savedetails">Save Details</string>
     <string name="searchfeedetails">Search Fee Details</string>
     <string name="searchstudents">Search Student</string>
     <string name="title_activity_student_profile">Student Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="adduser">ADD USER</string>
     <string name="userid">User ID :</string>
     <string name="username">User Name :</string>
