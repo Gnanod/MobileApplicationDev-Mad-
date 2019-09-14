@@ -7,11 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import Database.DBHelper;
-
 public class Login extends AppCompatActivity {
 
-    DBHelper db;
     EditText userNameId,passwordId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +17,6 @@ public class Login extends AppCompatActivity {
         userNameId= findViewById(R.id.username);
         passwordId= findViewById(R.id.password);
 
-        db = new DBHelper(this);
 
     }
 

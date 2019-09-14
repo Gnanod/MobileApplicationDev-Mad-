@@ -2,7 +2,6 @@ package com.example.guruapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
@@ -15,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import database.DBHelper;
+import databaseH.DBHelper;
 import model.UserDTO;
 
 public class SearchUpdateDeleteUser extends Fragment {

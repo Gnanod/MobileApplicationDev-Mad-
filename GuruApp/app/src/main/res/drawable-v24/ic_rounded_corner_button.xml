@@ -3,14 +3,11 @@
 <item>
     <shape android:shape="rectangle" >
         <stroke
-            android:height="2.0dip"
+            android:height="1.0dip"
             android:width="1.0dip"
-            android:color="#900C3F" />
+            android:color="#ff8f00" />
 
-        <gradient  android:centerColor="#757575"
-            android:endColor="#880e4f"
-            android:startColor="#009688" />
-
+        <solid android:color="#900C3F" />
 
         <corners
             android:bottomLeftRadius="100.0dip"

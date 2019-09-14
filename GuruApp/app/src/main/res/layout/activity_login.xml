@@ -78,7 +78,7 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="135dp"
+            android:layout_width="128dp"
             android:layout_height="67dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="280dp"
